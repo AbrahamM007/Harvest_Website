@@ -54,8 +54,7 @@ nav a:hover {
 }
 
 .hero {
-    
-    background: url(/images/Fruit-Banner.jpg) ;
+    background-color: #f9f9f9;
     text-align: center;
     padding: 100px 20px;
     color: #333;
