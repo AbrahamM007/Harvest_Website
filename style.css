@@ -55,6 +55,7 @@ nav a:hover {
 
 .hero {
     background-color: #f9f9f9;
+    background-image: url(/images/Fruit-Banner.jpg) ;
     text-align: center;
     padding: 100px 20px;
     color: #333;
@@ -165,8 +166,4 @@ footer {
     padding-top: 2.5vh;
     font-size: 5vh;
     font-family: 'arialround';
-}
-
-#Home{
-    background: url(/images/Fruit-Banner.jpg) ;
 }
