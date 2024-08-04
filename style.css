@@ -1,17 +1,53 @@
 @font-face {
     font-family: 'arialround';
     src: url('arialroundedmtbold.ttf');
-  }
-
-body {
+ }
+ 
+ body {
     font-family: 'arialround';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
-}
-
-header {
+    overflow: hidden;
+    position: relative;
+ }
+ 
+ body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #6ac045; /* Principal green color */
+    clip-path: circle(0 at 50% 50%);
+    animation: chompingEffect 2s forwards, retractEffect 2s 2s forwards;
+    z-index: 1000;
+ }
+ 
+ .logo-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+ }
+ 
+ .logo-wrapper img {
+    width: 100px; /* Adjust size as needed */
+    margin-bottom: 10px;
+ }
+ 
+ .logo-wrapper h1 {
+    color: #fff; /* White color for visibility on green */
+    font-size: 2em;
+ }
+ 
+ header {
     color: #6ac045;
     display: flex;
     justify-content: space-between;
@@ -19,58 +55,60 @@ header {
     background-color: #fff;
     padding: 5px 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    font-family: 'arial-round';
-}
-
-.logo img {
+    font-family: 'arialround';
+    position: relative;
+    z-index: 10;
+ }
+ 
+ .logo img {
     width: 40px;
     margin-right: 10px;
-}
-
-.logo h1 {
+ }
+ 
+ .logo h1 {
     display: inline;
     color: #6ac045; /* Primary green color */
     font-family: 'arialround';
-}
-
-nav ul {
+ }
+ 
+ nav ul {
     list-style: none;
     display: flex;
     gap: 40px;
     font-size: 18px;
-   
-}
-
-nav a {
+ }
+ 
+ nav a {
     text-decoration: none;
-    color: #6ac045;;
+    color: #6ac045;
     transition: color 0.3s;
     font-family: 'arialround';
-    
-}
-
-nav a:hover {
-    color: #6ac045;
-}
-
-.hero {
+ }
+ 
+ nav a:hover {
+    color: #55a035;
+ }
+ 
+ .hero {
     background-color: #f9f9f9;
-    background-size: contain; 
+    background-size: contain;
     text-align: center;
     padding: 100px 20px;
     color: #333;
-}
-
-.hero-content h2 {
+    opacity: 0;
+    transform: translateY(20px);
+ }
+ 
+ .hero-content h2 {
     font-size: 2.5em;
     margin: 0.5em 0;
-}
-
-.hero-content p {
+ }
+ 
+ .hero-content p {
     font-size: 1.2em;
-}
-
-.cta {
+ }
+ 
+ .cta {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
@@ -80,57 +118,61 @@ nav a:hover {
     text-decoration: none;
     transition: background-color 0.3s;
     font-family: 'arialround';
-}
-
-.cta:hover {
+ }
+ 
+ .cta:hover {
     background-color: #55a035;
-}
-
-.features, .values, .contact {
+ }
+ 
+ .features, .values, .contact {
     padding: 60px 20px;
     text-align: center;
-}
-
-.features h2, .values h2, .contact h2 {
+    opacity: 0;
+    transform: translateY(20px);
+ }
+ 
+ .features h2, .values h2, .contact h2 {
     margin-bottom: 40px;
     font-size: 2em;
-}
-
-.feature-list, .value-list {
+ }
+ 
+ .feature-list, .value-list {
     display: flex;
     justify-content: center;
     gap: 30px;
-}
-
-.feature-item, .value-item {
+ }
+ 
+ .feature-item, .value-item {
     width: 300px;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 40px;
-}
-
-.feature-item img {
+    opacity: 0;
+    transform: translateY(20px);
+ }
+ 
+ .feature-item img {
     width: 100%;
     border-radius: 8px;
-}
-
-.contact form {
+ }
+ 
+ .contact form {
     max-width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-input, textarea {
+ }
+ 
+ input, textarea {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
-}
-
-button {
+ }
+ 
+ button {
     padding: 10px;
     background-color: #6ac045;
     color: white;
@@ -139,26 +181,28 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
     font-family: 'arialround';
-}
-
-button:hover {
+ }
+ 
+ button:hover {
     background-color: #55a035;
-}
-
-footer {
-    background-color:#f9f9f9;
+ }
+ 
+ footer {
+    background-color: #f9f9f9;
     color: #6ac045;
     text-align: center;
     padding: 10px 0;
     font-family: 'arialround';
-}
-#logo-header{
+ }
+ 
+ #logo-header {
     margin-top: 10px;
     padding-left: 5vh;
     width: 50px;
     height: 50px;
-}
-#logo-header-text{
+ }
+ 
+ #logo-header-text {
     margin-top: 10px;
     color: #6ac045;
     right: 200vh;
@@ -166,8 +210,67 @@ footer {
     padding-top: 2.5vh;
     font-size: 5vh;
     font-family: 'arialround';
-}
-
-.htwo{
+ }
+ 
+ .htwo {
     color: #6ac045;
-}
+ }
+ 
+ /* Chomping effect for opening animation */
+ @keyframes chompingEffect {
+    0% {
+        clip-path: circle(0 at 50% 50%);
+    }
+    100% {
+        clip-path: circle(100% at 50% 50%);
+    }
+ }
+ 
+ /* Retracting effect to reveal the website */
+ @keyframes retractEffect {
+    0% {
+        clip-path: circle(100% at 50% 50%);
+    }
+    100% {
+        clip-path: circle(0 at 50% 50%);
+    }
+ }
+ 
+ /* Fade-in effect for the logo */
+ @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+ }
+ 
+ /* Pop up effect on scroll */
+ @keyframes popUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+ }
+ 
+ .popUp {
+    animation: popUp 1s forwards;
+ }
+ 
+ /* Style adjustments for logo during animation */
+ .logo-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;
+    text-align: center;
+    opacity: 1;
+    animation: none;
+ }
+ 
