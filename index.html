@@ -4,21 +4,21 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Harvest</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="styles.css">
    <link rel="icon" type="image/x-icon" href="./images/0001.png">
 </head>
 <body>
-   <div class="harvesting-animation">
-       <div class="harvesting-tool">
-           <img src="./images/1100.png" alt="Harvest Logo" class="harvesting-logo">
-       </div>
+  
    </div>
    <header>
        <div class="logo">
            <img id="logo-header" src="./images/0001.png" alt="Harvest Logo">
        </div>
        <h1 id="logo-header-text">Harvest</h1>
-       <nav>
+
+       <button id="try-app-button" >Try our app</button>
+
+       <!-- <nav>
            <ul>
                <li><a href="#home">Home</a></li>
                <li><a href="#features">Features</a></li>
@@ -26,24 +26,27 @@
                <li><a href="#team">Team</a></li>
                <li><a href="#contact">Contact</a></li>
            </ul>
-       </nav>
+       </nav> -->
    </header>
 
    <main>
        <section id="home" class="hero">
            <div id="Home" class="hero-content">
-               <h2>Welcome to Harvest</h2>
-               <p>Connecting local produce growers with buyers seamlessly.</p>
-               <a href="#features" class="cta">Explore Features</a>
+               <h2 id="open-text">Welcome to Harvest</h2>
+               <p id="under-open-text">Connecting local produce growers with buyers seamlessly.</p>
+               <video autoplay loop muted playsinline class="main-video">
+                <source src="Harvest_Demo.mp4" type="video/mp4">
+                
+            </video>
            </div>
        </section>
 
        <section id="features" class="features">
-           <h2 class="htwo">App Features</h2>
+           <h2 class="Htwo">App Features</h2>
            <div class="feature-list">
                <div class="feature-item">
                    <img src="./images/Map-Feature-removebg-preview (1).png" alt="Map Feature">
-                   <h3>Find Vendors Near You</h3>
+                   <h3>Find Local Vendors </h3>
                    <p>Locate nearby vendors easily using our interactive map.</p>
                </div>
                <div class="feature-item">
@@ -60,7 +63,7 @@
        </section>
 
        <section id="values" class="values">
-           <h2 class="htwo">Our Core Values</h2>
+           <h2 class="Htwo">Our Core Values</h2>
            <div class="value-list">
                <div class="value-item">
                    <h3>Sustainability</h3>
@@ -77,8 +80,8 @@
            </div>
        </section>
 
-       <section id="team" class="team">
-        <h2 class="htwo">Our Team</h2>
+       <!-- <section id="team" class="team">
+        <h2 class="Htwo">Our Team</h2>
         <div class="team-videos">
             <div class="video-container">
                 <video controls>
@@ -93,10 +96,10 @@
                 </video>
             </div>
         </div>
-    </section>
+    </section> -->
 
        <section id="contact" class="contact">
-           <h2 class="htwo">Contact Us</h2>
+           <h2 class="Htwo">Contact Us</h2>
            <form>
                <input type="text" placeholder="Your Name" required>
                <input type="email" placeholder="Your Email" required>
@@ -122,6 +125,6 @@
        <p>&copy; 2024 Harvest. All rights reserved.</p>
    </footer>
 
-   <script src="index.js"></script>
+   <script src="script.js"></script>
 </body>
 </html>

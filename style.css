@@ -1,289 +1,359 @@
 @font-face {
-    font-family: 'arialround';
-    src: url('arialroundedmtbold.ttf');
-  }
- /* General Styles */
+   font-family: 'arialround';
+   src: url('arialroundedmtbold.ttf');
+ }
+/* General Styles */
 
 body {
-    font-family: 'arialround', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: #333;
-    overflow: hidden; /* Hide overflow until animation ends */
- }
- 
- header {
-    color: #6ac045;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 5px 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
- }
- 
- .logo img {
-    width: 40px;
-    margin-right: 10px;
- }
- 
- .logo h1 {
-    display: inline;
-    color: #6ac045;
- }
- 
- nav ul {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    font-size: 18px;
- }
- 
- nav a {
-    text-decoration: none;
-    color: #6ac045;
-    transition: color 0.3s;
- }
- 
- nav a:hover {
-    color: #55a035;
- }
- 
- .hero {
-    background-color: #f9f9f9;
-    background-size: contain;
-    text-align: center;
-    padding: 100px 20px;
-    color: #333;
- }
- 
- .hero-content h2 {
-    font-size: 2.5em;
-    margin: 0.5em 0;
- }
- 
- .hero-content p {
-    font-size: 1.2em;
- }
- 
- .cta {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #6ac045;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
- }
- 
- .cta:hover {
-    background-color: #55a035;
- }
- 
- .features, .values, .contact, .team {
-    padding: 60px 20px;
-    text-align: center;
- }
- 
- .features h2, .values h2, .contact h2, .team h2 {
-    margin-bottom: 40px;
-    font-size: 2em;
- }
- 
- .feature-list, .value-list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
- }
- 
- .feature-item, .value-item {
-    width: 300px;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 40px;
- }
- 
- .feature-item img {
-    width: 100%;
-    border-radius: 8px;
- }
- 
- .contact form {
-    max-width: 500px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
- }
- 
- input, textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
- }
- 
- button {
-    padding: 10px;
-    background-color: #6ac045;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
- }
- 
- button:hover {
-    background-color: #55a035;
- }
- 
- footer {
-    background-color: #f9f9f9;
-    color: #6ac045;
-    text-align: center;
-    padding: 10px 0;
- }
- 
- #logo-header {
-    margin-top: 10px;
-    padding-left: 5vh;
-    width: 50px;
-    height: 50px;
- }
- 
- #logo-header-text {
-   margin-top: 10px;
+   font-family: 'arialround', sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   color: #333;
+   overflow: auto; /* Hide overflow until animation ends */
+}
+
+#Home{
+   margin-top: -100px;
+}
+
+header {
    color: #6ac045;
-   right: 200vh;
-   padding-right: 80vh;
-   padding-top: 2.5vh;
-   font-size: 5vh;
-   font-family: 'arialround';
-
- }
- 
- .htwo {
-    color: #6ac045;
- }
- 
- /* Harvesting Animation Styles */
- .harvesting-animation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 9999;
-    background: rgba(250, 250, 250, 0.79);
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
- 
- .harvesting-tool {
-    width: 200px;
-    height: 200px;
-    background: rgba(169, 238, 173, 0.99);
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: harvest 2s forwards;
- }
- 
- .harvesting-logo {
-    width: 70px;
-    height: auto;
- }
- 
- @keyframes harvest {
-    0% {
-        transform: translate(-50%, -50%) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translate(-50%, -50%) scale(2);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translate(-50%, -50%) scale(3) translateY(-100%);
-        opacity: 0;
-        background: transparent;
-    }
- }
- 
- /* Team Section Styles */
- .team {
-    padding: 60px 20px;
-    text-align: center;
- }
- 
- .team-videos {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
- }
- 
- .video-container {
-    width: 45%;
- }
- 
- video {
-    width: 100%;
-    border-radius: 30px;
- }
- 
- .popup {
-   display: none; /* Hidden by default */
-   position: fixed;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 100%;
-   background-color: rgba(0, 0, 0, 0.5);
-   z-index: 1000;
-   justify-content: center;
+   display: flex;
+   justify-content: space-between;
    align-items: center;
-}
-
-.popup-content {
    background-color: #fff;
-   padding: 20px;
-   border-radius: 50px;
-   width: 90%;
-   max-width: 400px;
-   text-align: center;
-   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   padding: 5px 20px;
+   
 }
 
-.popup-button {
-   background-color: #6ac045;
-   color: #fff;
+.main-video {
+   width: 400px;
+   height: 600px;
+   margin: 20px auto;
+   display: block;
+   border-radius: 20px;
+   margin-top: 118px;
+}
+
+
+
+.logo img {
+   width: 40px;
+   margin-right: 10px;
+}
+
+.logo h1 {
+   display: inline;
+   color: #6ac045;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   gap: 40px;
+   font-size: 18px;
+}
+
+nav a {
+   text-decoration: none;
+   color: #6ac045;
+   transition: color 0.3s;
+}
+
+nav a:hover {
+   color: #55a035;
+}
+
+.hero {
+   background-size: contain;
+   text-align: center;
+   padding: 100px 20px;
+   color: #333;
+}
+
+.hero-content h2 {
+   font-size: 2.5em;
+   margin: 0.5em 0;
+}
+
+.hero-content p {
+   font-size: 1.2em;
+}
+
+.cta {
+   display: inline-block;
+   margin-top: 20px;
    padding: 10px 20px;
-   border: none;
-   border-radius: 50px;
-   cursor: pointer;
-   margin: 10px 5px;
+   background-color: #6ac045;
+   color: white;
+   border-radius: 5px;
+   text-decoration: none;
    transition: background-color 0.3s;
 }
 
-.popup-button:hover {
+.cta:hover {
    background-color: #55a035;
 }
 
-.close-btn {
-   position: absolute;
-   top: 10px;
-   right: 10px;
+.features, .values, .contact, .team {
+   padding: 60px 20px;
+   text-align: center;
+}
+
+.features h2, .values h2, .contact h2, .team h2 {
+   margin-bottom: 40px;
+   margin-top: 42px;
+  
+}
+
+.features h3, .values h3, .contact h3, .team h3 {
+   font-size: 30px;
+   color: #6AC045;
+  
+}
+
+.features p, .values p, .contact p, .team p {
+   font-size: 18px;
+   color: #FFC067;
+  
+}
+
+.feature-list, .value-list {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+}
+
+.feature-item {
+   width: 300px;
+   padding: 20px;
+   
+   border-radius: 40px;
+}
+
+.value-item {
+   width: 300px;
+   padding: 20px;
+   background-color: #fff;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   border-radius: 40px;
+}
+
+.feature-item img {
+   width: 100%;
+   border-radius: 8px;
+}
+
+.contact form {
+   max-width: 500px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+input, textarea {
+   padding: 10px;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   font-size: 1em;
+}
+
+button {
+   padding: 10px;
+   background-color: #6ac045;
+   color: white;
+   border: none;
+   border-radius: 5px;
    cursor: pointer;
-   font-size: 1.2rem;
-   color: #333;
+   transition: background-color 0.3s;
+}
+
+button:hover {
+   background-color: #55a035;
+}
+
+footer {
+   background-color: #f9f9f9;
+   color: #6ac045;
+   text-align: center;
+   padding: 10px 0;
+}
+
+#logo-header {
+   margin-top: 10px;
+   padding-left: 5vh;
+   width: 50px;
+   height: 50px;
+}
+
+#logo-header-text {
+  margin-top: 10px;
+  color: #6ac045;
+  right: 200vh;
+  padding-right: 140vh;
+  margin-left: -70px;
+  padding-top: 2.5vh;
+  font-size: 5vh;
+  font-family: 'arialround';
+
+}
+
+#try-app-button {
+   padding: 10px 16px;
+   margin-right: 50px;
+   background-color: #FFC067;
+   border: none;
+   border-radius: 30px;
+   color: white;
+   cursor: pointer;
+   text-decoration: none;
+   transition: color 0.3s;
+   font-size: 15px;
+}
+
+
+/* Team Section Styles */
+.team {
+   padding: 60px 20px;
+   text-align: center;
+}
+
+.team-videos {
+   display: flex;
+   justify-content: center;
+   gap: 40px;
+}
+
+.video-container {
+   width: 45%;
+}
+
+video {
+   width: 100%;
+   border-radius: 30px;
+}
+
+.popup {
+  display: none; /* Hidden by default */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-button {
+  background-color: #6ac045;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 10px 5px;
+  transition: background-color 0.3s;
+}
+
+.popup-button:hover {
+  background-color: #55a035;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+#open-text{
+   font-size: 70px;
+   color: #86D861;
+}
+
+#under-open-text{
+   font-size: 30px;
+   color: #FFB144;
+}
+
+.Htwo {
+   font-size: 55px;
+   color: #86D861;
+   
+}
+
+/* Base styles for the sections */
+section, .feature-item, .value-item {
+   opacity: 0;
+   transform: translateY(40px); /* Start further below for a more dramatic effect */
+   transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Animation class to apply when elements should be visible */
+.animate {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Animation for the initial load */
+@keyframes initialLoad {
+   from {
+       opacity: 0;
+       transform: translateY(90px); /* More pronounced initial rise */
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}
+
+.initial-load {
+   animation: initialLoad 1s ease-out;
+}
+
+/* Initial state for elements before they come into view */
+.animate {
+   opacity: 0;
+   transform: translateY(50px);
+   transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* State when elements are in view */
+.animate.in-view {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Initial state for header and button */
+.header-animate {
+   opacity: 0;
+   transform: translateY(-50px);
+   transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* State when header and button are in view */
+.header-animate.in-view {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+/* Additional styling to ensure smooth transition */
+.header-animate, .animate {
+   transition: opacity 1s ease-out, transform 1s ease-out;
 }
