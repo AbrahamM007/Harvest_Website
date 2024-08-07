@@ -10,7 +10,6 @@ body {
    padding: 0;
    box-sizing: border-box;
    color: #333;
-   background-color: #e6ffdb;
    overflow: auto; /* Hide overflow until animation ends */
 }
 
